@@ -106,9 +106,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# cdb policy change function
-function tempgrant() { cdb policy mod "$host" -l pheven:1d -r pheven:1d --proposal True; }
-
 # easy ping
 alias p="ping -c 4"
 
