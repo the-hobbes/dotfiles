@@ -112,9 +112,6 @@ alias p="ping -c 4"
 # Reboot shell
 alias reshell='source ~/.bashrc'
 
-# easy ubiquity ssh
-alias ub='ssh pheven@phevenubi.hot'
-
 # execute CAPS lock script
 # ./capsLock.sh &
 
@@ -129,14 +126,4 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # android sdk android debug bridge
 export PATH=${PATH}:~/platform-tools
-
-#ASH - weekly snippit generator
-ash() {
-  prodaccess --kinit
-  /home/build/static/projects/toolshed/ash.par -alt pheven
-}
-export -f ash
-
-# get to tcollab notes directory in google drive quickly
-alias notes='cd Google\ Drive/Documents/TCollab\ SRE\ Notes/Notes'
 
