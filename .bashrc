@@ -130,3 +130,8 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 # android sdk android debug bridge
 export PATH=${PATH}:~/platform-tools
 
+# colordiff!
+export DIFF="colordiff -u"
+
+# make less interpret color codes!
+export LESS="${LESS}R"
