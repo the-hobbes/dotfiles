@@ -1,6 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+# In OSX, .bash_profile is used instead of .bashrc
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -106,14 +107,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# cdb policy change function
+function tempgrant() { cdb policy mod "$host" -l pheven:1d -r pheven:1d --proposal True; }
+
 # easy ping
 alias p="ping -c 4"
 
 # Reboot shell
 alias reshell='source ~/.bashrc'
-
-# easy ubiquity ssh
-alias ub='ssh pheven@phevenubi.hot'
 
 # execute CAPS lock script
 # ./capsLock.sh &
@@ -139,4 +140,14 @@ export -f ash
 
 # get to tcollab notes directory in google drive quickly
 alias notes='cd Google\ Drive/Documents/TCollab\ SRE\ Notes/Notes'
+
+# connect to heartofgold
+alias heartofgold="ssh pheven@heartofgold.mtv"
+
+# node and yeoman
+export NODE_PATH=:/home/pheven/npm/lib/node_modules
+alias yo="~/npm/bin/yo"
+
+# alias personal ubiquty
+alias parasaurolophus="parasaurolophus.hot.corp.google.com"
 
